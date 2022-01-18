@@ -1,18 +1,23 @@
 <template>
   <div id="home">
-    <Header></Header>
+    <Aside></Aside>
+    <div class="main">
+    </div>
+
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header/Header.vue";
+import Aside from "@/components/Aside/Aside.vue";
 export default {
   components: {
-    Header,
+    Aside
   },
-}
+};
 </script>
 
 <style>
-
+#home {
+  display: flex;
+}
 </style>
