@@ -9,25 +9,25 @@
         </router-link>
       </div>
       <div class="Aside-icon">
-        <router-link to="/Home/homepage">
+        <router-link to="/Home/attention">
           <i class="iconfont icon-wodeguanzhu"></i>
           <div><span>关注</span></div>
         </router-link>
       </div>
       <div class="Aside-icon">
-        <router-link to="/Home/homepage">
+        <router-link to="/Home/hotspot">
           <i class="iconfont icon-ef-redian-gongju"></i>
           <div><span>热点</span></div>
         </router-link>
       </div>
       <div class="Aside-icon">
-        <router-link to="/Home/homepage">
+        <router-link to="/Home/Petdating">
           <i class="iconfont icon-xiangqin"></i>
           <div><span>宠物相亲</span></div>
         </router-link>
       </div>
       <div class="Aside-icon">
-        <router-link to="/Home/homepage">
+        <router-link to="/Home/Petadoption">
           <i class="iconfont icon-chongwu"></i>
           <div><span>宠物收养</span></div>
         </router-link>

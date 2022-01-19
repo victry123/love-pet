@@ -1,7 +1,5 @@
 <template>
-  <h1>
-      首页
-  </h1>
+  <h1>宠物收养</h1>
 </template>
 
 <script>
@@ -11,7 +9,7 @@ export default {
 </script>
 
 <style>
-    h1 {
-        color: red;
-    }
+h1 {
+    color: red;
+}
 </style>
