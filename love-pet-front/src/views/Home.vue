@@ -2,6 +2,10 @@
   <div id="home">
     <Aside></Aside>
     <div class="main">
+      <Header></Header>
+      <div class="main-main">
+        <router-view></router-view>
+      </div>
     </div>
 
   </div>
@@ -9,9 +13,11 @@
 
 <script>
 import Aside from "@/components/Aside/Aside.vue";
+import Header from "@/components/Header/Header.vue";
 export default {
   components: {
-    Aside
+    Aside,
+    Header
   },
 };
 </script>
@@ -20,4 +26,19 @@ export default {
 #home {
   display: flex;
 }
+.main {
+  flex-grow: 1;
+  height: 937px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-main {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #161722;
+}
+
+
 </style>
