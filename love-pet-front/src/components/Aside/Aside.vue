@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style>
-@import "//at.alicdn.com/t/font_2876277_9ga5509t4yc.css";
+
 #aside {
   flex-basis: 160px;
   width: 160px;

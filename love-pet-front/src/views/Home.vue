@@ -23,13 +23,14 @@ export default {
 </script>
 
 <style>
+@import "//at.alicdn.com/t/font_2876277_7ex4php5szg.css";
+
 #home {
   display: flex;
 }
 .main {
   flex-grow: 1;
   height: 937px;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
 }
