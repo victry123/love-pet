@@ -10,13 +10,29 @@
       </button>
     </div>
     <div class="user">
-      <div class="login"></div>
+      <div v-if="login">
+        <button class="login">登录</button>
+      </div>
+      <div v-else class="user">
+        <button class="login-f">发布</button>
+        <a href=""><img :src="userimgurl" alt="" class="userimg"></a>
+      </div>
+      <div>
+
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      login: false,
+      userimgurl: require("../../assets/img/userimg.png"),
+    }
+  },
+};
 </script>
 
 <style>
@@ -85,9 +101,38 @@ export default {};
 .user {
   width: 300px;
   height: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
 }
-.login {
+
+.login,.login-f {
+  width: 80px;
+  height: 38px;
+  background-color: #FF5454;
+  align-items: center;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.login-f {
+  background-color: #161722;
+  border: 2px solid #FFF;
+}
+
+.userimg {
+  width: 32px;
+  height: 32px;
   background-color: red;
+  margin-right: 30px;
+  border-radius: 16px;
 }
 
 </style>
