@@ -7,6 +7,8 @@ import hotspot from "../components/hotspot/hotspot.vue";
 import Petdating from "../components/Petdating/Petdating.vue";
 import Petadoption from "../components/Petadoption/Petadoption.vue";
 
+import Login from "../views/Login/Login.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -43,8 +45,12 @@ const routes = [
         path: "Petadoption",
         component: Petadoption,
       },
-      
-    ]
+    ],
+  },
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
   },
 ];
 

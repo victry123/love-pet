@@ -3,8 +3,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-
-
 // 清楚默认的css样式
 import "@/assets/css/resrt.css";
 

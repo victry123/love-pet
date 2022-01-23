@@ -7,7 +7,6 @@
         <router-view></router-view>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -17,7 +16,7 @@ import Header from "@/components/Header/Header.vue";
 export default {
   components: {
     Aside,
-    Header
+    Header,
   },
 };
 </script>
@@ -40,6 +39,4 @@ export default {
   flex-grow: 1;
   background-color: #161722;
 }
-
-
 </style>

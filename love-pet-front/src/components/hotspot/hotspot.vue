@@ -3,13 +3,11 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
 h1 {
-    color: red;
+  color: red;
 }
 </style>
