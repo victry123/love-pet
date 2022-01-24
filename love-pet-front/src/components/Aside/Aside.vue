@@ -47,7 +47,6 @@ export default {
 </script>
 
 <style>
-
 #aside {
   flex-basis: 160px;
   width: 160px;

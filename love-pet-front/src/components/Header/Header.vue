@@ -3,7 +3,12 @@
     <div class="seach">
       <i class="iconfont icon-sousuoxiao"></i>
       <form action="" target="_blank">
-        <input type="text" class="inseach" maxlength="100" placeholder="搜索你感兴趣的内容" />
+        <input
+          type="text"
+          class="inseach"
+          maxlength="100"
+          placeholder="搜索你感兴趣的内容"
+        />
       </form>
       <button type="button" class="buseach">
         <span>搜索</span>
@@ -134,5 +139,4 @@ export default {
   margin-right: 30px;
   border-radius: 16px;
 }
-
 </style>
