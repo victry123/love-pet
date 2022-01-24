@@ -33,7 +33,7 @@
 export default {
   data() {
     return {
-      login: false,
+      login: true,
       userimgurl: require("../../assets/img/userimg.png"),
     }
   },
