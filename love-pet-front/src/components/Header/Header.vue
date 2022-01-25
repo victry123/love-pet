@@ -10,8 +10,8 @@
           placeholder="搜索你感兴趣的内容"
         />
       </form>
-      <button type="button" class="buseach">
-        <span>搜索</span>
+      <button type="button" class="buseach"  @mouseover="smover" @mouseleave="smleave">
+        <span :class="{seachmove : seachmover==true}">搜索</span>
       </button>
     </div>
     <div class="user">
@@ -33,8 +33,18 @@
 export default {
   data() {
     return {
+      seachmover: false,
       login: true,
       userimgurl: require("../../assets/img/userimg.png"),
+    }
+  },
+  methods: {
+    // 搜索按钮的移入高亮
+    smover() {
+      this.seachmover = true;
+    },
+    smleave() {
+      this.seachmover = false;
     }
   },
 };
@@ -52,6 +62,9 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 32px 0 22px;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 .seach {
   width: 620px;
@@ -138,5 +151,9 @@ export default {
   background-color: red;
   margin-right: 30px;
   border-radius: 16px;
+}
+
+.seachmove {
+  color: #fe2c55;
 }
 </style>

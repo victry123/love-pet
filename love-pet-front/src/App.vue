@@ -1,9 +1,15 @@
 <template>
-  <div>
+  <div class="app">
     <router-view></router-view>
   </div>
 </template>
 
-<style></style>
+<script></script>
 
-<style></style>
+<style>
+.app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+</style>

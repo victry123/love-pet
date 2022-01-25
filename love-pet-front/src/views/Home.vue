@@ -26,17 +26,25 @@ export default {
 
 #home {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 .main {
   flex-grow: 1;
-  height: 937px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .main-main {
   width: 100%;
-  flex-grow: 1;
+  height:calc(100% - 60px);
+  flex: 1 1 auto;
   background-color: #161722;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 </style>

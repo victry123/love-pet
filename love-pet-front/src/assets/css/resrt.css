@@ -5,6 +5,9 @@
 
  html,body {
      height: 100%;
+     width: 100%;
+     box-sizing: border-box;
+     
  }
 
  html, body, div, span, applet, object, iframe,
@@ -83,10 +86,6 @@
      width: 5px;
      background-color: rgba(125, 125, 125, 0.7);
      -webkit-border-radius: 6px;
- }
- 
- html, body {
-     width: 100%;
  }
  
  body {

@@ -74,8 +74,9 @@ export default {
 #aside {
   flex-basis: 160px;
   width: 160px;
-  height: 937px;
+  height: 100%;
   background-color: #060716;
+  position: relative;
 }
 .logo {
   width: 130px;
