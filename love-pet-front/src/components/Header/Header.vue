@@ -10,21 +10,24 @@
           placeholder="搜索你感兴趣的内容"
         />
       </form>
-      <button type="button" class="buseach"  @mouseover="smover" @mouseleave="smleave">
-        <span :class="{seachmove : seachmover==true}">搜索</span>
+      <button
+        type="button"
+        class="buseach"
+        @mouseover="smover"
+        @mouseleave="smleave"
+      >
+        <span :class="{ seachmove: seachmover == true }">搜索</span>
       </button>
     </div>
     <div class="user">
-      <div v-if="login">
+      <div v-if="!login">
         <button class="login">登录</button>
       </div>
       <div v-else class="user">
         <button class="login-f">发布</button>
-        <a href=""><img :src="userimgurl" alt="" class="userimg"></a>
+        <a href=""><img :src="this.$store.state.userimgurl" alt="" class="userimg" /></a>
       </div>
-      <div>
-
-      </div>
+      <div></div>
     </div>
   </div>
 </template>
@@ -34,9 +37,9 @@ export default {
   data() {
     return {
       seachmover: false,
-      login: true,
-      userimgurl: require("../../assets/img/userimg.png"),
-    }
+      login: false,
+      
+    };
   },
   methods: {
     // 搜索按钮的移入高亮
@@ -45,7 +48,7 @@ export default {
     },
     smleave() {
       this.seachmover = false;
-    }
+    },
   },
 };
 </script>
@@ -122,15 +125,15 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  
 }
 
-.login,.login-f {
+.login,
+.login-f {
   width: 80px;
   height: 38px;
-  background-color: #FF5454;
+  background-color: #ff5454;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-weight: bolder;
@@ -142,13 +145,12 @@ export default {
 
 .login-f {
   background-color: #161722;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
 }
 
 .userimg {
   width: 32px;
   height: 32px;
-  background-color: red;
   margin-right: 30px;
   border-radius: 16px;
 }

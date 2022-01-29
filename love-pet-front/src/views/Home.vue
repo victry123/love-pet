@@ -39,7 +39,7 @@ export default {
 
 .main-main {
   width: 100%;
-  height:calc(100% - 60px);
+  height: calc(100% - 60px);
   flex: 1 1 auto;
   background-color: #161722;
   position: relative;

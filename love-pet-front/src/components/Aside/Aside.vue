@@ -2,12 +2,24 @@
   <div id="aside">
     <div class="logo" :style="{ backgroundImage: `url(${imgurl})` }"></div>
     <div class="nav" v-for="(item, index) in iconlist" :key="item.id">
-      <div class="Aside-icon" @click="handleClick(index, item.id)" @mouseover="mover(index)" @mouseleave="mleave">
-        <router-link :to="item.url" :class="{ active: active == index ,mactive: mactive == index}">
-          <i :class="item.icon"></i>
-          <div><span>{{item.name}}</span></div>
-        </router-link>
-      </div>
+      <router-link :to="item.url">
+        <div
+          class="Aside-icon"
+          @click="handleClick(index, item.id)"
+          @mouseover="mover(index)"
+          @mouseleave="mleave"
+        >
+          <div
+            :to="item.url"
+            :class="{ active: active == index, mactive: mactive == index }"
+          >
+            <i :class="item.icon"></i>
+            <div>
+              <span>{{ item.name }}</span>
+            </div>
+          </div>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -65,7 +77,7 @@ export default {
     // 鼠标移出取消高亮
     mleave() {
       this.mactive = 100;
-    }
+    },
   },
 };
 </script>
