@@ -25,7 +25,9 @@
       </div>
       <div v-else class="user">
         <button class="login-f">发布</button>
-        <a href=""><img :src="this.$store.state.userimgurl" alt="" class="userimg" /></a>
+        <a href=""
+          ><img :src="this.$store.state.userimgurl" alt="" class="userimg"
+        /></a>
       </div>
       <div></div>
     </div>
@@ -38,7 +40,6 @@ export default {
     return {
       seachmover: false,
       login: false,
-      
     };
   },
   methods: {

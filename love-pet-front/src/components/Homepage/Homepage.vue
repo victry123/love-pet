@@ -1,6 +1,6 @@
 <template>
   <div id="homepage">
-    <ul  v-for="item in articles" :key="item.id">
+    <ul v-for="item in articles" :key="item.id">
       <li class="hd">
         <div>
           <a href="">
@@ -11,23 +11,19 @@
           <a href="">
             <div class="title">
               <p>
-                {{item.title}}
+                {{ item.title }}
               </p>
             </div>
           </a>
           <div class="contentuser">
             <a href="">
-              <img
-                :src="item.user.userimg"
-                alt=""
-                class="contentuserimg"
-              />
+              <img :src="item.user.userimg" alt="" class="contentuserimg" />
             </a>
             <a href="">
-              <span>{{item.user.username}}</span>
+              <span>{{ item.user.username }}</span>
             </a>
             <a href="" class="issuetime">
-              <span>{{item.issuetime}}</span>
+              <span>{{ item.issuetime }}</span>
             </a>
           </div>
         </div>

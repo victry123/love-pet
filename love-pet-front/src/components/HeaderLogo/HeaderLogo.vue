@@ -68,7 +68,7 @@ export default {
   flex: 0.5;
 }
 
-#seach{
+#seach {
   width: 1000px;
   display: flex;
   flex-direction: row;

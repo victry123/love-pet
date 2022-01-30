@@ -49,8 +49,7 @@
                   <img alt="" :src="item.content_photo" />
                 </div>
                 <div class="search_content_main" v-if="item.type == 'video'">
-                  <video  controls="controls" :src="item.content_video">
-                  </video>
+                  <video controls="controls" :src="item.content_video"></video>
                 </div>
               </div>
             </div>
@@ -218,7 +217,6 @@ export default {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
-
 }
 
 .search_photo {
