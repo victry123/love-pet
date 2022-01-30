@@ -1,5 +1,5 @@
 <template>
-  <h1>宠物收养</h1>
+  <h1>宠物收养aaa</h1>
 </template>
 
 <script>
