@@ -11,6 +11,8 @@ import Login from "../views/Login/Login.vue";
 import Register from "../views/Register/Register.vue";
 import Search from "../views/Search/Search.vue";
 import UserCenter from "../views/UserCenter/UserCenter.vue";
+
+import Issue from "../components/Issue/Issue.vue"
 import Detail from "../views/Detail/Detail.vue";
 Vue.use(VueRouter);
 
@@ -70,11 +72,18 @@ const routes = [
     name: "UserCenter",
     component: UserCenter,
   },
-  {
+
+    path: "/Issue",
+    name: "Issue",
+    component: Issue,
+  }
+  
+
     path: "/Detail",
     name: "Detail",
     component: Detail,
   },
+
 ];
 
 const router = new VueRouter({
