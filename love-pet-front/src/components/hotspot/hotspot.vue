@@ -83,7 +83,7 @@ export default {
   height: 48px;
   margin-top: 8px;
 }
-p {
+.title p {
   color: #fff;
   width: 100%;
   height: 100%;

@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-@import "//at.alicdn.com/t/font_2876277_7ex4php5szg.css";
+@import "//at.alicdn.com/t/font_2876277_gzz74mewf0i.css";
 
 #home {
   display: flex;

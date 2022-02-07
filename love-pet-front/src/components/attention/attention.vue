@@ -83,66 +83,6 @@ export default {
   flex-wrap: wrap;
   overflow-y: scroll;
 }
-.hd {
-  display: inline-block;
-  width: 320px;
-  height: 340px;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.cover {
-  width: 100%;
-  height: 240px;
-}
-
-.cover img {
-  width: 100%;
-  height: 100%;
-}
-
-.title {
-  width: 100%;
-  height: 48px;
-  margin-top: 8px;
-}
-p {
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.contentuser {
-  display: flex;
-  font-size: 16px;
-  width: 100%;
-  height: 34px;
-  margin-top: 8px;
-  align-items: center;
-}
-.contentuser span {
-  color: #ddd;
-}
-.contentuserimg {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  border-radius: 16px;
-}
-.issuetime {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row-reverse;
-}
-.issuetime span {
-  color: #999;
-}
 
 .search_data {
   margin: 0 auto;

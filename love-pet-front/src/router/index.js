@@ -72,13 +72,12 @@ const routes = [
     name: "UserCenter",
     component: UserCenter,
   },
-
+  {
     path: "/Issue",
     name: "Issue",
     component: Issue,
-  }
-  
-
+  },
+  {
     path: "/Detail",
     name: "Detail",
     component: Detail,
