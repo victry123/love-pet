@@ -13,6 +13,12 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
+// 导入mavon-editor 发布组件
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
+Vue.use(mavonEditor)
+
 Vue.config.productionTip = false;
 
 new Vue({

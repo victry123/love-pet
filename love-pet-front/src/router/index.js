@@ -10,6 +10,8 @@ import Petadoption from "../components/Petadoption/Petadoption.vue";
 import Login from "../views/Login/Login.vue";
 import Search from "../views/Search/Search.vue";
 import UserCenter from "../views/UserCenter/UserCenter.vue";
+
+import Issue from "../components/Issue/Issue.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -62,6 +64,11 @@ const routes = [
     path: "/UserCenter",
     name: "UserCenter",
     component: UserCenter,
+  },
+  {
+    path: "/Issue",
+    name: "Issue",
+    component: Issue,
   }
   
 ];
