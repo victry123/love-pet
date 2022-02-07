@@ -8,8 +8,10 @@ import Petdating from "../components/Petdating/Petdating.vue";
 import Petadoption from "../components/Petadoption/Petadoption.vue";
 
 import Login from "../views/Login/Login.vue";
+import Register from "../views/Register/Register.vue";
 import Search from "../views/Search/Search.vue";
 import UserCenter from "../views/UserCenter/UserCenter.vue";
+import Detail from "../views/Detail/Detail.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -54,6 +56,11 @@ const routes = [
     component: Login,
   },
   {
+    path: "/Register",
+    name: "Register",
+    component: Register,
+  },
+  {
     path: "/Search",
     name: "Search",
     component: Search,
@@ -62,8 +69,12 @@ const routes = [
     path: "/UserCenter",
     name: "UserCenter",
     component: UserCenter,
-  }
-  
+  },
+  {
+    path: "/Detail",
+    name: "Detail",
+    component: Detail,
+  },
 ];
 
 const router = new VueRouter({
