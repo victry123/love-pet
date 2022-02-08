@@ -8,18 +8,29 @@
         </el-col>
       </el-form-item>
       <el-form-item class="works">
-        <mavon-editor v-model="form.content" @change="handle"></mavon-editor>
+        <!-- <mavon-editor v-model="form.content" @change="handle"></mavon-editor> -->
+          <mavon-editor
+        v-model="form.content"
+        ref="md"
+        @imgAdd="$imgAdd"
+        @change="change"
+        
+      />
+
       </el-form-item>
+
+       <UploadVideo></UploadVideo>
       <el-form-item>
         <el-button type="primary" size="small" @click="submit">发布</el-button>
       </el-form-item>
     </el-form>
-    <!-- <article v-html="myhtml"></article> -->
   </div>
 </template>
 
 <script>
-// import { getAddRelease } from "@/request/api";
+import UploadVideo from "@/components/UploadVideo/UploadVideo.vue"
+
+import axios from "axios";
 export default {
   name: "addRelease",
   data() {
@@ -29,17 +40,36 @@ export default {
         people: "",
         content: ""
       },
-      defaultData: "preview",
-      
-      timeValue: ""
     };
+  },
+  components: {
+    UploadVideo,
   },
   created() {},
   methods: {
-    handle(value, render) {
-      this.myhtml = render;
-      console.log(value, render);
+       $imgAdd(pos, $file) {
+      var formdata = new FormData();
+      formdata.append("file", $file);
+      //将下面上传接口替换为你自己的服务器接口
+      axios({
+        url: "/common/upload",
+        method: "post",
+        data: formdata,
+        headers: { "Content-Type": "multipart/form-data" }
+      }).then(url => {
+        this.$refs.md.$img2Url(pos, url);
+      });
     },
+
+    change(value, render) {
+      // render 为 markdown 解析后的结果
+      this.html = render;
+    },
+    submit() {
+      console.log(this.content);
+      console.log(this.html);
+      this.$message.success("提交成功！");
+    }
   }
 };
 </script>
