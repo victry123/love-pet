@@ -16,12 +16,17 @@
           <span>往生堂堂主</span>
         </div>
         <div class="pusera">
-
+           <button class="atten">关注</button>
         </div>
       </div>
     </div>
     <div class="petimg">
       <img :src="this.$store.state.userimgurl" alt="" class="img" />
+      <div class="pageturning">
+        <button class="last">上一个</button>
+        <button class="next">下一个</button>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -43,6 +48,24 @@ export default {};
 .puser {
   display: flex;
   flex-grow: 1;
+  flex-direction: column;
+}
+.atten {
+  width: 50px;
+  height: 30px;
+  background-color: #ff5454;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.pusera{
+  margin-left: 10px;
 }
 .puseru {
   width: 100%;
@@ -62,7 +85,6 @@ export default {};
   width: 900px;
   height: 150px;
   display: flex;
-  background-color: antiquewhite;
 }
 .ptitle {
   width: 70%;
@@ -96,9 +118,32 @@ export default {};
 .petimg {
   width: 900px;
   height: 600px;
+  
 }
 .img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+}
+.pageturning {
+  display: flex;
+  justify-content: center;
+  
+}
+.pageturning button{
+  width: 80px;
+  height: 38px;
+  background-color: #ff5454;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 </style>
