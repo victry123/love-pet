@@ -2,7 +2,7 @@
   <div class="album albumvideo">
     <div>
       <p class="type_title">
-        <span>视频介绍</span>
+        <span>上传视频</span>
       </p>
       <div class="pic_img">
         <div class="pic_img_box">
