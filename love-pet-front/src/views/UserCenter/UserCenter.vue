@@ -14,15 +14,20 @@
           <!-- 关注粉丝获赞 -->
           <div class="user_work">
             <div class="user_work_main">
-              <span>关注</span>
+              <label @click="click_show">关注</label>
+              
+              <div class="pop" v-if="this.$store.state.showModal">
+                 <ClickAttention ></ClickAttention>
+              </div>
+
               <p>{{ user_info.attention }}</p>
             </div>
             <div class="user_work_main">
-              <span>粉丝</span>
+              <label @click="click_show">粉丝</label>
               <p>{{ user_info.fans }}</p>
             </div>
             <div class="user_work_main">
-              <span>获赞</span>
+              <label>获赞</label>
               <p>{{ user_info.praise }}</p>
             </div>
           </div>
@@ -123,6 +128,7 @@
 </template>
 
 <script>
+import ClickAttention from "@/components/ClickAttention/ClickAttention.vue";
 import HeaderLogo from "@/components/HeaderLogo/HeaderLogo.vue";
 export default {
   data() {
@@ -150,14 +156,23 @@ export default {
       ],
     };
   },
+  methods: {
+    click_show(){
+      this.$store.state.showModal = true;
+    }
+  },
 
   components: {
     HeaderLogo,
+    ClickAttention,
   },
 };
 </script>
 
 <style>
+
+
+
 .UserCenter {
   height: calc(100% - 90px);
   background-color: #161722;
@@ -197,7 +212,8 @@ export default {
   flex-direction: column;
 }
 
-.user_work_main span {
+.user_work_main label {
+  line-height: 20px;
   display: flex;
   color: rgba(112, 112, 112, 1);
   font-size: 16px;
