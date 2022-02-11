@@ -28,6 +28,7 @@
         <a href=""
           ><img :src="this.$store.state.userimgurl" alt="" class="userimg"
         /></a>
+        <a href="/Home/PrivateLetter"><i class="iconfont icon-sixin"></i></a>
       </div>
       <div></div>
     </div>
@@ -39,7 +40,7 @@ export default {
   data() {
     return {
       seachmover: false,
-      login: false,
+      login: true,
     };
   },
   methods: {
@@ -69,6 +70,11 @@ export default {
   position: relative;
   flex-grow: 1;
   flex-shrink: 0;
+}
+.user i {
+  font-size: 28px;
+  color: #fff;
+  margin-right: 30px;
 }
 .seach {
   width: 620px;
