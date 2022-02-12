@@ -6,6 +6,7 @@ import attention from "../components/attention/attention.vue";
 import hotspot from "../components/hotspot/hotspot.vue";
 import Petdating from "../components/Petdating/Petdating.vue";
 import Petadoption from "../components/Petadoption/Petadoption.vue";
+import PrivateLetter from "../components/PrivateLetter/PrivateLetter.vue";
 
 import Login from "../views/Login/Login.vue";
 import Register from "../views/Register/Register.vue";
@@ -49,6 +50,10 @@ const routes = [
       {
         path: "Petadoption",
         component: Petadoption,
+      },
+      {
+        path: "PrivateLetter",
+        component: PrivateLetter,
       },
     ],
   },

@@ -2,21 +2,26 @@
   <div id="Petdating">
     <div class="pettitle">
       <div class="ptitle">
-        <p>
-          标题--我家有只大熊猫一直单着 有看的上的吗
-        </p>
+        <p>标题--我家有只大熊猫一直单着 有看的上的吗</p>
         <div class="pspan">
           <span><i class="iconfont icon-shijian"></i>2022-01-20 15:00</span>
-          <span><i class="iconfont icon-dizhi"></i>四川省xxx市xxx大道xxx号</span>
+          <span
+            ><i class="iconfont icon-dizhi"></i>四川省xxx市xxx大道xxx号</span
+          >
         </div>
       </div>
       <div class="puser">
         <div class="puseru">
-          <a href=""><img :src="this.$store.state.userimgurl" alt="" class="petuserimg" /></a>
-          <span>往生堂堂主</span>
-        </div>
-        <div class="pusera">
-           <button class="atten">关注</button>
+          <a href=""
+            ><img :src="this.$store.state.userimgurl" alt="" class="petuserimg"
+          /></a>
+          <div class="pusers">
+            <span>往生堂堂主</span>
+            <div class="pusera">
+              <button class="atten">关注</button>
+              <button class="privatechat">私信</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -26,7 +31,6 @@
         <button class="last">上一个</button>
         <button class="next">下一个</button>
       </div>
-      
     </div>
   </div>
 </template>
@@ -45,12 +49,17 @@ export default {};
   justify-content: center;
   align-items: center;
 }
+.pusers {
+  flex-direction: column;
+  margin-left: 10px;
+}
 .puser {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
 }
-.atten {
+.atten,
+.privatechat {
   width: 50px;
   height: 30px;
   background-color: #ff5454;
@@ -63,9 +72,11 @@ export default {};
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin-right: 10px;
+  margin-top: 10px;
 }
-.pusera{
-  margin-left: 10px;
+.pusera {
+  display: flex;
 }
 .puseru {
   width: 100%;
@@ -97,7 +108,7 @@ export default {};
 .ptitle p {
   color: block;
   height: 40%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   font-weight: bolder;
   display: -webkit-box;
@@ -118,7 +129,6 @@ export default {};
 .petimg {
   width: 900px;
   height: 600px;
-  
 }
 .img {
   width: 100%;
@@ -127,10 +137,10 @@ export default {};
 }
 .pageturning {
   display: flex;
-  justify-content: center;
-  
+  justify-content: space-between;
+  margin-top: 20px;
 }
-.pageturning button{
+.pageturning button {
   width: 80px;
   height: 38px;
   background-color: #ff5454;
@@ -143,7 +153,5 @@ export default {};
   cursor: pointer;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 </style>
