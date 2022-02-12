@@ -37,7 +37,7 @@
       </div>
 
       <!-- 关闭 -->
-      <div class="main_close" @click="click_close">
+      <div class="main_close" >
         <svg
           width="36"
           height="36"
@@ -86,7 +86,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 mask {
   background-color: #000;
   opacity: 0.3;

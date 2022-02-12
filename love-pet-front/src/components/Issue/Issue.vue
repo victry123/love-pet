@@ -1,7 +1,17 @@
 <template>
   <div style="width:90%;margin:50px auto">
     <el-form ref="form" :model="form">
-     
+      <el-form-item label="发布对象:">
+        <el-select v-model="form.people" placeholder="请选择">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          ></el-option>
+        </el-select>
+      </el-form-item>
+
       <el-form-item label="发布标题:">
         <el-col :span="6">
           <el-input v-model="form.title"></el-input>
@@ -40,6 +50,20 @@ export default {
         people: "",
         content: ""
       },
+      options: [
+        {
+          value: "0",
+          label: "普通发布"
+        },
+        {
+          value: "1",
+          label: "宠物相亲"
+        },
+        {
+          value: "2",
+          label: "宠物领养"
+        }
+      ],
     };
   },
   components: {

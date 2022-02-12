@@ -8,23 +8,24 @@
         class="username"
       />
       <input type="password" placeholder="请输入密码" class="password" />
-      <div class="save">
-        <input type="radio" class="save-login" />保存登录
-        <p class="forget">忘记密码?</p>
+      <div class="save_login">
+        <div class="save_login_left">
+          <input type="checkbox" name="remembered" />
+          <label>保存登录</label>
+        </div>
+
+        <div class="forget">
+          <label>忘记密码</label>
+        </div>
       </div>
-      <div class="login-button">登录</div>
     </form>
-    <hr />
-    <div class="Login-floor">
-      <div class="qq">
-        <i></i>
-        <p>QQ</p>
-      </div>
-      <div class="wx">
-        <i></i>
-        <p>微信</p>
-      </div>
-      <div class="register">立即注册</div>
+    <!-- 登录按钮 -->
+    <div>
+      <button class="login-button">登录</button>
+    </div>
+
+    <div class="register">
+      <label>立即注册</label>
     </div>
   </div>
 </template>
@@ -35,71 +36,87 @@ export default {};
 
 <style>
 .Login {
-  width: 640px;
-  height: 455px;
-  background-color: #292b35;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 455.52px;
+  background-color: #161722;
   margin: 40px auto;
+  border-radius: 4px;
+  justify-content: space-around;
 }
 
 .login-title {
+  color: rgba(112, 112, 112, 1);
+  font-size: 24px;
   padding-top: 20px;
   text-align: center;
-  color: #b7b7bb;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .username,
 .password {
+  border-radius: 2px;
   display: block;
   width: 400px;
   height: 40px;
   margin: 20px auto;
 }
 
-.save {
+.save_login {
   width: 400px;
-  height: 20px;
-  margin: 0 auto;
-  color: #ffffff;
-}
-
-.save-login {
-  float: left;
-}
-
-.forget {
-  float: right;
-  margin: 0;
-}
-
-.login-button {
-  width: 280px;
   height: 40px;
   margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save_login label {
+  color: rgba(135, 135, 134, 1);
+  font-size: 14px;
+}
+
+.save_login_left,
+.forget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.save_login input {
+  margin-right: 5px;
+  width: 17px;
+  height: 18px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  border: 0;
+  width: 271px;
+  height: 40px;
+  margin: 10px auto;
   background-color: #ff5454;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 40px;
-  margin-bottom: 40px;
+  color: #fff;
+  border-radius: 3px;
 }
 
-.Login-floor {
-  width: 400px;
-  height: 20px;
-  margin: 20px auto;
-  color: #ffffff;
-}
-
-.qq {
-  float: left;
-  margin-right: 20px;
-}
-
-.wx {
-  float: left;
+.login-button:hover {
+  background-color: #f02929;
 }
 
 .register {
-  float: right;
+  display: flex;
+  color: #fff;
+  justify-content: flex-end;
+}
+
+.register label {
+  color: rgb(156, 156, 150);
+  font-size: 13px;
+  margin-right: 15px;
 }
 </style>
