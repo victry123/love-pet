@@ -15,6 +15,7 @@ import UserCenter from "../views/UserCenter/UserCenter.vue";
 
 import Issue from "../components/Issue/Issue.vue"
 import Detail from "../views/Detail/Detail.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -87,7 +88,7 @@ const routes = [
     name: "Detail",
     component: Detail,
   },
-
+  
 ];
 
 const router = new VueRouter({
