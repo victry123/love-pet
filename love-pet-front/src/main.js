@@ -18,6 +18,11 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
 Vue.use(mavonEditor)
+// 导入Antd 评论组件
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+
+Vue.use(Antd)
 
 Vue.config.productionTip = false;
 

@@ -108,7 +108,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 @import "//at.alicdn.com/t/font_2876277_7ex4php5szg.css";
 
 #Search {
@@ -152,7 +152,6 @@ export default {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #fff;
   display: flex;
   margin-left: 42px;
 }
@@ -160,6 +159,8 @@ export default {
 .header_photo img {
   width: 60px;
   border-radius: 50%;
+  border: 0;
+
 }
 
 .word {
