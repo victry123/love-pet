@@ -2,7 +2,7 @@
   <div id="aside">
     <div class="logo" :style="{ backgroundImage: `url(${imgurl})` }"></div>
     <div class="nav" v-for="(item, index) in iconlist" :key="item.id">
-      <router-link :to="item.url">
+      <router-link :to="item.url" class="link-style">
         <div
           class="Aside-icon"
           @click="handleClick(index, item.id)"
@@ -89,6 +89,9 @@ export default {
   height: 100%;
   background-color: #060716;
   position: relative;
+}
+.link-style {
+  color: #7e8c8d;
 }
 .logo {
   width: 130px;

@@ -24,6 +24,11 @@ import 'ant-design-vue/dist/antd.css'
 
 Vue.use(Antd)
 
+// 导入聊天组件
+import LemonIMUI from 'lemon-imui';
+import 'lemon-imui/dist/index.css';
+Vue.use(LemonIMUI);
+
 Vue.config.productionTip = false;
 
 new Vue({

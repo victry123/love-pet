@@ -115,9 +115,7 @@ export default {};
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-.pspan {
-  margin-top: 20px;
-}
+
 .pspan span {
   font-size: 16px;
   margin-right: 30px;
