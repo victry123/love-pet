@@ -25,10 +25,16 @@
       </div>
       <div v-else class="user">
         <button class="login-f" @click="go_add">发布</button>
-        <a href=""
-          ><img :src="this.$store.state.userimgurl" alt="" class="userimg"
-        /></a>
+        <label href="" @click="user_cerent = !user_cerent"><img :src="this.$store.state.userimgurl" alt="" class="userimg"
+        /></label>
         <a href="/Home/PrivateLetter"><i class="iconfont icon-sixin"></i></a>
+
+        <div class="user_cerent" v-show="user_cerent">
+          <ul>
+            <li><label>个人主页</label></li>
+            <li><label>退出登录</label></li>
+          </ul>
+        </div>
       </div>
       <div></div>
     </div>
@@ -41,6 +47,7 @@ export default {
     return {
       seachmover: false,
       login: true,
+      user_cerent: false
     };
   },
   methods: {
@@ -51,12 +58,14 @@ export default {
     smleave() {
       this.seachmover = false;
     },
-    go_add(){
-        this.$router.push({ path:'/Issue'  })
-    }
+    go_add() {
+      this.$router.push({ path: "/Issue" });
+    },
   },
 };
 </script>
+
+
 
 <style>
 #header {
@@ -135,6 +144,7 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  position: relative;
 }
 
 .login,
@@ -167,5 +177,37 @@ export default {
 
 .seachmove {
   color: #fe2c55;
+}
+
+.user_cerent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 84px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50px;
+  right: 71px;
+  z-index: 1;
+}
+
+.user_cerent ul li {
+  color: #000;
+  font-size: 16px;
+  height: 42px;
+  width: 100px;
+  line-height: 34px;
+  border-radius: 4px;
+}
+.user_cerent ul {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.user_cerent ul li:hover {
+  color: red;
 }
 </style>
