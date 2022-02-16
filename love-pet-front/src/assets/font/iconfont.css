@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1644737008383') format('truetype');
+  src: url('iconfont.ttf?t=1644996723851') format('truetype');
 }
 
 .iconfont {
@@ -17,5 +17,13 @@
 
 .icon-pinglun:before {
   content: "\e63a";
+}
+
+.icon-icon-arrow-left2:before {
+  content: "\e664";
+}
+
+.icon-icon-arrow-right2:before {
+  content: "\e667";
 }
 

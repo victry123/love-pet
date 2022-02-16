@@ -24,12 +24,22 @@
     </div>
 
     <div class="user">
-      <div v-if="login">
+      <div v-if="!login">
         <button class="login">登录</button>
       </div>
       <div v-else class="user">
-        <button class="login-f">发布</button>
-        <a href=""><img :src="userimgurl" alt="" class="userimg" /></a>
+        <button class="login-f" @click="go_add">发布</button>
+        <label href="" @click="user_cerent = !user_cerent"
+          ><img :src="this.$store.state.userimgurl" alt="" class="userimg"
+        /></label>
+        <a href="/Home/PrivateLetter"><i class="iconfont icon-sixin"></i></a>
+
+        <div class="user_cerent" v-show="user_cerent">
+          <ul>
+            <li><label>个人主页</label></li>
+            <li><label>退出登录</label></li>
+          </ul>
+        </div>
       </div>
       <div></div>
     </div>
@@ -40,6 +50,7 @@
 export default {
   data() {
     return {
+      user_cerent: false,
       imgurl: require("../../assets/img/logo.png"),
       seachmover: false,
       login: true,
@@ -53,6 +64,9 @@ export default {
     },
     smleave() {
       this.seachmover = false;
+    },
+    go_add() {
+      this.$router.push({ path: "/Issue" });
     },
   },
 };
