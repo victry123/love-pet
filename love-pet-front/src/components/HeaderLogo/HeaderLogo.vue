@@ -28,7 +28,7 @@
         <button class="login">登录</button>
       </div>
       <div v-else class="user">
-        <button class="login-f">发布</button>
+        <button class="login-f" @click="go_add">发布</button>
         <a href=""><img :src="userimgurl" alt="" class="userimg" /></a>
       </div>
       <div></div>
@@ -53,6 +53,9 @@ export default {
     },
     smleave() {
       this.seachmover = false;
+    },
+    go_add() {
+      this.$router.push({ path: "/Issue" });
     },
   },
 };
